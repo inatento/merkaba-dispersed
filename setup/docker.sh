@@ -27,9 +27,9 @@ install_docker() {
     execute_with_spinner "apt-get install -y apt-transport-https ca-certificates curl software-properties-common"
     execute_with_spinner "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -"
     execute_with_spinner "apt-key fingerprint 0EBFCD88"
-    execute_with_spinner "add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable""
+    execute_with_spinner 'add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"'
     execute_with_spinner "apt-get update"
-    execute_with_spinner "apt-get install -y "docker-ce""
+    execute_with_spinner 'apt-get install -y "docker-ce"'
     execute_with_spinner "docker info"
     additional "Agregando $SUDO_USER al grupo 'docker'"
     execute_with_spinner "usermod -aG docker $SUDO_USER"

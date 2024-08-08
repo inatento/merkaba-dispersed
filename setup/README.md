@@ -50,16 +50,5 @@ echo "export PATH=$PATH:$HOME/fabric-samples/bin" >> ~/.bashrc
 source ~/.bashrc
 
 
-6. Validate the setup
+6. Validar la configuración
     ./validate-prereqs.sh
-
-===============================================================
-# Issues?
-# Run the following script and share it with Raj in course Q&A
-===============================================================
-Log into the VM
-> vagrant ssh
-> cd /vagrant/setup
-> ./validate-all.sh  > report.txt
-
-Copy & paste the content of report.txt to Q&A post or email.
